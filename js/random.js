@@ -8,19 +8,19 @@ var win = 0;
 SpanNow.html(now);
 
 xo.click(function(){
-  if($(this).html() === '' && win == 0){
-  	$(this).html(now);
+  if($(this).html() === '' && win != 'O' && win != 'X'){
+    $(this).html(now);
     ChangePlayer(now);
   }
 });
 
 function ChangePlayer(player){
     if(player === 'O'){
-    	now = 'X'
-    	SpanNow.html(now)
+      now = 'X'
+      SpanNow.html(now)
     } else {
-    	now = 'O'
-    	SpanNow.html('O');
+      now = 'O'
+      SpanNow.html('O');
     }
 }
 
